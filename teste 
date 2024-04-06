@@ -1,0 +1,61 @@
+
+```python
+class Veiculo:
+    def __init__(self, marca, modelo, num_rodas, velocidade, marcha):
+        self.marca = marca
+        self.modelo = modelo
+        self.num_rodas = num_rodas
+        self.velocidade = velocidade
+        self.marcha = marcha
+
+    def acelerar(self, valor):
+        self.velocidade += valor
+
+    def frear(self, valor):
+        self.velocidade -= valor
+
+    def imprimir_informacoes(self):
+        print("Marca:", self.marca)
+        print("Modelo:", self.modelo)
+        print("Número de Rodas:", self.num_rodas)
+        print("Velocidade:", self.velocidade)
+        print("Marcha:", self.marcha)
+
+
+class Carro(Veiculo):
+    def __init__(self, marca, modelo, num_rodas, velocidade, marcha):
+        super().__init__(marca, modelo, num_rodas, velocidade, marcha)
+
+
+class Moto(Veiculo):
+    def __init__(self, marca, modelo, num_rodas, velocidade, marcha):
+        super().__init__(marca, modelo, num_rodas, velocidade, marcha)
+
+
+class Bicicleta(Veiculo):
+    def __init__(self, marca, modelo, num_rodas, velocidade, marcha):
+        super().__init__(marca, modelo, num_rodas, velocidade, marcha)
+
+
+carro = Carro("Ford", "Ka", 4, 85.0, 5)
+moto = Moto("Honda", "Biz", 2, 9.2, True)
+bike = Bicicleta("Caloi", "Elite", 2, 18, True)
+
+carro.acelerar(30)
+carro.frear(10)
+moto.acelerar(100)
+moto.frear(20)
+bike.acelerar(20)
+bike.frear(5)
+
+carro.imprimir_informacoes()
+bike.imprimir_informacoes()
+moto.imprimir_informacoes()
+
+# Testando a velocidade atual
+print("Velocidade atual do Carro:", carro.velocidade)
+print("Velocidade atual da Moto:", moto.velocidade)
+print("Velocidade atual da Bicicleta:", bike.velocidade)
+```
+
+Isso deve produzir a saída desejada com os valores corretos para as velocidades atuais de cada veículo.
